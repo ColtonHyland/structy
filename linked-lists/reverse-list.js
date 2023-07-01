@@ -17,3 +17,27 @@
 // // a -> b -> c -> d -> e -> f
 
 // reverseList(a); // f -> e -> d -> c -> b -> a
+
+class Node {
+  constructor(val) {
+    this.val = val;
+    this.next = null;
+  }
+}
+
+//iterative solution
+const reverseList = (head) => {
+  let prev = null;
+  let curr = head;
+  while(curr !== null) {
+    let next = curr.next;
+    curr.next = prev;
+    prev = curr;
+    curr = next;
+  }
+  return prev;
+};
+
+module.exports = {
+  reverseList,
+};
