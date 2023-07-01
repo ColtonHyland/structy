@@ -22,7 +22,12 @@
 // }
 
 const isUnivalueList = (head) => {
-  // todo
+  let curr = head;
+  while(head !== null) {
+    if(head.val !== curr.val) return false;
+    curr = curr.next;
+  }
+  return true;
 };
 
 module.exports = {
