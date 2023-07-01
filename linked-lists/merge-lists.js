@@ -38,6 +38,11 @@ class Node {
   }
 }
 
+// n = length of list 1
+// m = length of list 2
+// Time: O(min(n, m))
+// Space: O(1)
+
 // //iterative soln
 // const mergeLists = (head1, head2) => {
 //   let head = new Node(null);
@@ -58,6 +63,11 @@ class Node {
 //   if(curr2 === null) tail.next = curr1; 
 //   return head.next;
 // };
+
+//n = length of list 1
+// m = length of list 2
+// Time: O(min(n, m))
+// Space: O(min(n, m))
 
 // recursive soln
 // const mergeLists = (head1, head2) => {
