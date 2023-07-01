@@ -21,14 +21,31 @@
 //   }
 // }
 
-const isUnivalueList = (head) => {
-  let curr = head;
-  while(head !== null) {
-    if(head.val !== curr.val) return false;
-    curr = curr.next;
-  }
-  return true;
-};
+// n = number of nodes
+// Time: O(n)
+// Space: O(1)
+
+// iterative 
+// const isUnivalueList = (head) => {
+//   let curr = head;
+//   while(head !== null) {
+//     if(head.val !== curr.val) return false;
+//     curr = curr.next;
+//   }
+//   return true;
+// };
+
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
+
+// recursive
+// const isUnivalueList = (head) => {
+//   let next = head.next;
+//   if(head.next === null) return true
+//   if(head.val !== next.val) return false
+//   return isUnivalueList(next);
+// };
 
 module.exports = {
   isUnivalueList,
