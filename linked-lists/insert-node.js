@@ -28,9 +28,40 @@ class Node {
   }
 }
 
-const insertNode = (head, value, index) => {
-  // todo
-};
+//iterative soln
+// const insertNode = (head, value, index) => {
+//   let newNode = new Node(value);
+//   let current = head;
+//   let count = 0;
+//   if(index === count) {
+//     newNode.next = current;
+//     return newNode;
+//   }
+//   while(count < index && count !== index - 1) {
+//     current = current.next;
+//     count++;
+//   }
+//   newNode.next = current.next;
+//   current.next = newNode;
+//   return head;
+// };
+
+// recursive soln
+// const insertNode = (head, value, index, count = 0) => {
+//   if(index === 0) {
+//     let newNode = new Node(value);
+//     newNode.next = head;
+//     return newNode;
+//   }
+//   if(count === index - 1) {
+//     let next = head.next;
+//     head.next = new Node(value);
+//     head.next.next = next;
+//     return head;
+//   }
+//   head.next = insertNode(head.next, value, index, count + 1);
+//   return head;
+// };
 
 module.exports = {
   insertNode,
