@@ -45,6 +45,9 @@ class Node {
 //   current.next = newNode;
 //   return head;
 // };
+// n = number of nodes
+// Time: O(n)
+// Space: O(1)
 
 // recursive soln
 // const insertNode = (head, value, index, count = 0) => {
@@ -62,6 +65,9 @@ class Node {
 //   head.next = insertNode(head.next, value, index, count + 1);
 //   return head;
 // };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
 module.exports = {
   insertNode,
