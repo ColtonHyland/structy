@@ -12,9 +12,16 @@ class Node {
   }
 }
 
-const createLinkedList = (values) => {
-  // todo
-};
+// iterative soln
+// const createLinkedList = (values) => {
+//   let head = new Node(null);
+//   let tail = head;
+//   for(let value of values) {
+//     tail.next = new Node(value);
+//     tail = tail.next;
+//   }
+//   return head.next;
+// };
 
 module.exports = {
   createLinkedList,
