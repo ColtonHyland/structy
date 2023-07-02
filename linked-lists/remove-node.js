@@ -35,25 +35,35 @@ removeNode(a, "c");
 // }
 
 //iterative soln
-const removeNode = (head, targetVal) => {
-  if (head.val === targetVal) return head.next;
+// const removeNode = (head, targetVal) => {
+//   if (head.val === targetVal) return head.next;
   
-  let current = head;
-  let prev = null;
-  while (current !== null) {
-    if (current.val === targetVal) {
-      prev.next = current.next;
-      break;
-    }
-    prev = current;
-    current = current.next;
-  }
+//   let current = head;
+//   let prev = null;
+//   while (current !== null) {
+//     if (current.val === targetVal) {
+//       prev.next = current.next;
+//       break;
+//     }
+//     prev = current;
+//     current = current.next;
+//   }
   
-  return head;
-};
+//   return head;
+// };
 // n = number of nodes
 // Time: O(n)
 // Space: O(1)
+
+// const removeNode = (head, targetVal) => {
+//   if (head === null) return null;
+//   if (head.val === targetVal) return head.next;
+//   head.next = removeNode(head.next, targetVal);
+//   return head;
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
 module.exports = {
   removeNode,
