@@ -25,12 +25,6 @@
 //   }
 // }
 
-// class Node {
-//   constructor(val) {
-//     this.val = val;
-//     this.next = null;
-//   }
-// }
 
 // iterative soln
 // const longestStreak = (head) => {
@@ -52,24 +46,6 @@
 //   return maxStreak;
 // };
 
-// recursive soln
-// const longestStreak = (head) => {
-//   let maxStreak = 0;
-//   let streak = 0;
-//   let current = head;
-//   let prevValue = null;
-//   while(current !== null) {
-//     if(current.val === prevValue) {
-//       streak++;
-//     } else {
-//       streak = 1;
-//     }
-//     if(maxStreak < streak) maxStreak = streak;
-//     prevValue = current.val;
-//     current = current.next;
-//   }
-//   return maxStreak;
-// };
 
 module.exports = {
   longestStreak,
