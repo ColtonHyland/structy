@@ -23,6 +23,14 @@ class Node {
 //   return head.next;
 // };
 
+// recurseive soln
+// const createLinkedList = (values, count = 0) => {
+//   if(count === values.length) return null;
+//   let head = new Node(values[count]);
+//   head.next = createLinkedList(values, count + 1);
+//   return head;
+// };
+
 module.exports = {
   createLinkedList,
 };
