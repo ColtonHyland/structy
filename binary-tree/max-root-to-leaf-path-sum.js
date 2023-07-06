@@ -39,6 +39,9 @@
 //   if(root.left === null && root.right === null) return root.val;
 //   return maxChildPathSum + root.val;
 // };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
 // module.exports = {
 //   maxPathSum,
