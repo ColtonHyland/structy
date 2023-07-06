@@ -16,10 +16,30 @@
 // b.right = e;
 // c.right = f;
 
-// //       3
+//      3
 //    /    \
 //   11     4
 //  / \      \
 // 4   -2     1
 
 // maxPathSum(a); // -> 18
+
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+
+// recursive soln
+// const maxPathSum = (root) => {
+//   if(root === null) return -Infinity;
+//   const maxChildPathSum = Math.max(maxPathSum(root.left), maxPathSum(root.right));
+//   if(root.left === null && root.right === null) return root.val;
+//   return maxChildPathSum + root.val;
+// };
+
+// module.exports = {
+//   maxPathSum,
+// };
