@@ -43,6 +43,20 @@
 //   }
 //   return sum;
 // }
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
+// Note: this solution should really be considered O(n^2) runtime because the JavaScript shift() methods runs in O(n).
+// JavaScript does not have a native queue data structure that is maximally efficient.
+
+// recursive soln
+// const treeSum = (root) => {
+//   if(root === null) return 0;
+//   return root.val + treeSum(root.left) + treeSum(root.right);
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
 module.exports = {
   treeSum,
