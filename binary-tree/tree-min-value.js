@@ -31,10 +31,34 @@
 //   }
 // }
 
-const treeMinValue = (root) => {
-  // todo
-};
+// depth first iterative soln
+// const treeMinValue = (root) => {
+//   if(root === null) return null;
+//   let lowest = root.val;
+//   const stack = [ root ];
+//   while(stack.length > 0) {
+//     const current = stack.pop();
+//     if(current.val < lowest) lowest = current.val;
+//     if(current.left !== null) stack.push(current.left);
+//     if(current.right !== null) stack.push(current.right);
+//   }
+//   return lowest;
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
-module.exports = {
-  treeMinValue,
-};
+// recursive soln
+// const treeMinValue = (root) => {
+//   if (root === null) return Infinity;
+//   const leftMin = treeMinValue(root.left);
+//   const rightMin = treeMinValue(root.right);
+//   return Math.min(root.val, leftMin, rightMin);
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
+
+// module.exports = {
+//   treeMinValue,
+// };
