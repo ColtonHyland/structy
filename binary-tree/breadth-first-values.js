@@ -22,3 +22,32 @@
 
 // breadthFirstValues(a); 
 //    -> ['a', 'b', 'c', 'd', 'e', 'f']
+
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+
+// iterative soln
+// const breadthFirstValues = (root) => {
+//   if(root === null) return [];
+//   const result = [];
+//   const queue = [ root ];
+//   while(queue.length > 0) {
+//     const current = queue.shift();
+//     result.push(current.val);
+//     if(current.left !== null) queue.push(current.left);
+//     if(current.right !== null) queue.push(current.right);
+//   }
+//   return result;
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
+
+// module.exports = {
+//   breadthFirstValues,
+// };
