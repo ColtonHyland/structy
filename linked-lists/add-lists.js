@@ -41,12 +41,12 @@
 // addLists(a1, b1);
 // // 5 -> 7 -> 9
 
-class Node {
-  constructor(val) {
-    this.val = val;
-    this.next = null;
-  }
-}
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.next = null;
+//   }
+// }
 
 // iterative soln
 // const addLists = (head1, head2) => {
@@ -92,6 +92,10 @@ class Node {
 //   resultNode.next = addLists(next1, next2, nextCarry);
 //   return resultNode;
 // };
+// n = length of list 1
+// m = length of list 2
+// Time: O(max(n, m))
+// Space: O(max(n, m))
 
 module.exports = {
   addLists,
