@@ -23,3 +23,33 @@
 // 4   -2     1
 
 // bottomRightValue(a); // -> 1
+
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+
+// iterative soln
+const bottomRightValue = (root) => {
+  const queue = [ root ]
+  let deepest = root;
+  while(queue.length > 0) {
+    deepest = queue.shift();
+    if(deepest.left !== null) queue.push(deepest.left);
+    if(deepest.right !== null) queue.push(deepest.right);
+  }
+  return deepest.val;
+};
+
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
+// Note: this solution should really be considered O(n^2) runtime because the JavaScript shift() methods runs in O(n).
+// JavaScript does not have a native queue data structure that is maximally efficient.
+
+module.exports = {
+  bottomRightValue,
+};
