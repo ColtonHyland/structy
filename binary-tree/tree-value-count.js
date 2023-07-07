@@ -30,12 +30,33 @@
 //   }
 // }
 
-const treeValueCount = (root, target) => {
-  if(root === null) return 0;
-  const count = root.val === target ? 1 : 0;
-  return count + treeValueCount(root.left, target) + treeValueCount(root.right, target)
-};
+// recursive soln
+// const treeValueCount = (root, target) => {
+//   if(root === null) return 0;
+//   const count = root.val === target ? 1 : 0;
+//   return count + treeValueCount(root.left, target) + treeValueCount(root.right, target)
+// };
+//n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
-module.exports = {
-  treeValueCount,
-};
+// iterative soln
+// const treeValueCount = (root, target) => {
+//   let count = 0;
+//   if(root === null) return count;
+//   const stack = [ root ];
+//   while(stack.length !== 0) {
+//     const current = stack.pop();
+//     if(current.val === target) count++;
+//     if(current.right !== null) stack.push(current.right);
+//     if(current.left !== null) stack.push(current.left);
+//   }
+//   return count;
+// };
+//n = number of nodes
+// Time: O(n)
+// // Space: O(n)
+
+// module.exports = {
+//   treeValueCount,
+// };
