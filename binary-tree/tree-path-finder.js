@@ -24,3 +24,42 @@
 // d   e     f
 
 // pathFinder(a, 'e'); // -> [ 'a', 'b', 'e' ]
+
+// class Node {
+//   constructor(val) {
+//     this.val = val;
+//     this.left = null;
+//     this.right = null;
+//   }
+// }
+const pathFinder = (root, target) => {
+  const result = pathFinderHelper(root, target);
+  if(result === null) {
+    return null;
+  } else {
+    return result.reverse();
+  }
+}
+
+const pathFinderHelper = (root, target) => {
+  if(root === null) return null;
+  if(root.val === target) return [ root.val ]
+  
+  const leftNodes = pathFinderHelper(root.left, target);
+  if(leftNodes !== null) {
+    leftNodes.push(root.val);
+    return leftNodes;
+  }
+  
+  const rightNodes = pathFinderHelper(root.right, target);
+  if(rightNodes !== null) {
+    rightNodes.push(root.val);
+    return rightNodes;
+  }
+
+  return null;
+};
+
+module.exports = {
+  pathFinder,
+};
