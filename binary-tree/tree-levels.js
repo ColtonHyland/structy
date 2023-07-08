@@ -35,9 +35,32 @@
 //   }
 // }
 
-const treeLevels = (root) => {
-  // todo
-};
+// depth first iterative soln
+// const treeLevels = (root) => {
+//   if(root === null) return [];
+//   const levels = [];
+//   const stack = [ {node: root, level: 0} ]
+  
+//   while(stack.length > 0) {
+//     const { node, level } = stack.pop();
+    
+//     if(levels.length === level) {
+//       levels.push([ node.val ]);
+//     } else {
+//       levels[level].push(node.val);
+//     }
+    
+//     if(node.right !== null) stack.push({ 
+//       node: node.right,
+//       level: level + 1
+//       });
+//     if(node.left !== null) stack.push({
+//       node: node.left,
+//       level: level + 1
+//       });
+//   }
+//   return levels;
+// };
 
 module.exports = {
   treeLevels,
