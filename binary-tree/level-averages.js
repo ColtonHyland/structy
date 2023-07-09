@@ -30,9 +30,39 @@
 //   }
 // }
 
-const levelAverages = (root) => {
-  // todo
-};
+//recursive soln
+// const levelAverages = (root) => {
+//   const avgs = [];
+//   const levels = [];
+//   levelAveragesHelper(root, levels, 0)
+//   for (let level of levels) {
+//     avgs.push(getAvg(level));
+//   }
+//   return avgs;
+// };
+
+// const levelAveragesHelper = (node, levels, level) => {
+//   if(node === null) return;
+//   if(levels.length === level) {
+//     levels.push([ node.val ])
+//   } else {
+//     levels[level].push(node.val)
+//   }
+//   levelAveragesHelper(node.left, levels, level + 1);
+//   levelAveragesHelper(node.right, levels, level + 1);
+//   return levels;
+// };
+
+// const getAvg = (arr) => {
+//   let sum = 0;
+//   for(let num of arr) {
+//     sum += num;
+//   }
+//   return sum / arr.length;
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
 module.exports = {
   levelAverages,
