@@ -30,8 +30,18 @@
 //   }
 // }
 
+//recursive soln
 const leafList = (root) => {
-  // todo
+  const leafs = [];
+  findLeafs(root, leafs);
+  return leafs;
+};
+
+const findLeafs = (node, leafs) => {
+  if (node === null) return;
+  if (node.left === null && node.right === null) leafs.push(node.val);
+  findLeafs(node.left, leafs);
+  findLeafs(node.right, leafs);
 };
 
 module.exports = {
