@@ -31,18 +31,38 @@
 // }
 
 //recursive soln
-const leafList = (root) => {
-  const leafs = [];
-  findLeafs(root, leafs);
-  return leafs;
-};
+// const leafList = (root) => {
+//   const leafs = [];
+//   findLeafs(root, leafs);
+//   return leafs;
+// };
 
-const findLeafs = (node, leafs) => {
-  if (node === null) return;
-  if (node.left === null && node.right === null) leafs.push(node.val);
-  findLeafs(node.left, leafs);
-  findLeafs(node.right, leafs);
-};
+// const findLeafs = (node, leafs) => {
+//   if (node === null) return;
+//   if (node.left === null && node.right === null) leafs.push(node.val);
+//   findLeafs(node.left, leafs);
+//   findLeafs(node.right, leafs);
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
+
+// depth first iterative soln
+// const leafList = (root) => {
+//   if (root === null) return [];
+//   const leafs = [];
+//   const stack = [ root ];
+//   while (stack.length > 0) {
+//     const node = stack.pop();
+//     if (node.left === null && node.right === null) leafs.push(node.val);
+//     if (node.right !== null) stack.push(node.right);
+//     if (node.left !== null) stack.push(node.left);
+//   }
+//   return leafs;
+// };
+// n = number of nodes
+// Time: O(n)
+// Space: O(n)
 
 module.exports = {
   leafList,
