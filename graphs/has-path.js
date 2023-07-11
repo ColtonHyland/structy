@@ -15,6 +15,15 @@
 
 // hasPath(graph, 'f', 'k'); // true
 
+// recursive
+// const hasPath = (graph, src, dst) => {
+//   if (src === dst) return true;
+//   for (let neighbor of graph[src]) {
+//     if (hasPath(graph, neighbor, dst) === true) return true
+//   }
+//   return false;
+// };
+
 // // depth first iterative soln
 // const hasPath = (graph, src, dst) => {
 //   const stack = [ src ];
