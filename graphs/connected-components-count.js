@@ -11,9 +11,35 @@
 //   4: [3, 2]
 // }); // -> 2
 
+// n = number of nodes
+// e = number edges
+// Time: O(e)
+// Space: O(n)
+
 const connectedComponentsCount = (graph) => {
-  // todo
+  let count = 0;
+  const visited = new Set();
+  
+  for (let node in graph) {
+    if (explore(Number(node), graph, visited) === true) count++;
+  }
+  
+  return count;
 };
+
+const explore = (node, graph, visited) => {
+  if (visited.has(node)) return false;
+  visited.add(node);
+  for (let neighbor of graph[node]) {
+    explore(neighbor, graph, visited);
+  }
+  return true;
+}
+
+module.exports = {
+  connectedComponentsCount,
+};
+
 
 module.exports = {
   connectedComponentsCount,
