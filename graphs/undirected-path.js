@@ -7,6 +7,7 @@
 // e = number edges
 // Time: O(e)
 // Space: O(e)
+
 const undirectedPath = (edges, nodeA, nodeB) => {
   const graph = buildGraph(edges);
   return hasPath(graph, nodeA, nodeB, new Set());
