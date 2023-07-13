@@ -11,8 +11,31 @@
 //   4: ['3', '2']
 // }); // -> 4
 
+
+// recursive depth first
+// n = number of nodes
+// e = number edges
+// Time: O(e)
+// Space: O(n)
+
 const largestComponent = (graph) => {
-  // todo
+  let largestSize = 0;
+  const visited = new Set();
+  for (let node in graph) {
+    const componentSize = exploreGraph(graph, node, visited);
+    if (componentSize > largestSize) largestSize = componentSize;
+  }
+  return largestSize;
+};
+
+const exploreGraph = (graph, src, visited) => {
+  if (visited.has(src)) return 0;
+  visited.add(src);
+  let size = 1
+  for (let neighbor of graph[src]) {
+    size += exploreGraph(graph, neighbor, visited);
+  }
+  return size;
 };
 
 module.exports = {
