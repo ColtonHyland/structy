@@ -13,3 +13,40 @@
 // ];
 
 // islandCount(grid); // -> 3
+
+const islandCount = (grid) => {
+  let count = 0;
+  const visited = new Set();
+  for (let row = 0; row < grid.length; row++) {
+    for (let col = 0; col < grid[0].length; col++) {
+      if (exploreGraph(grid, row, col, visited) === true) {
+        count++;
+      }
+    }
+  }
+  
+  return count;
+};
+
+const exploreGraph = (grid, row, col, visited) => {
+  const rowInbounds = 0 <= row && row < grid.length;
+  const colInbounds = 0 <= col && col < grid[0].length;
+  if (!rowInbounds || !colInbounds) return false;
+  
+  if(grid[row][col] === 'W') return false;
+  
+  const pos = row + ',' + col;
+  if (visited.has(pos)) return false;
+  visited.add(pos);
+  
+  exploreGraph(grid, row - 1, col, visited);
+  exploreGraph(grid, row + 1, col, visited);
+  exploreGraph(grid, row, col - 1, visited);
+  exploreGraph(grid, row, col + 1, visited);
+  
+  return true;
+};
+
+module.exports = {
+  islandCount,
+};
