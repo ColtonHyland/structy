@@ -14,14 +14,17 @@
 
 // islandCount(grid); // -> 3
 
+// r = number of rows
+// c = number of columns
+// Time: O(rc)
+// Space: O(rc)
+
 const islandCount = (grid) => {
   let count = 0;
   const visited = new Set();
   for (let row = 0; row < grid.length; row++) {
     for (let col = 0; col < grid[0].length; col++) {
-      if (exploreGraph(grid, row, col, visited) === true) {
-        count++;
-      }
+      if (exploreGraph(grid, row, col, visited) === true) count++;
     }
   }
   
