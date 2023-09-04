@@ -15,7 +15,7 @@
 // e = # edges
 // n = # nodes
 // Time: O(e)
-// Space: O(n
+// Space: O(n)
 const longestPath = (graph) => {
   const distance = {};
   for (let node in graph) {
